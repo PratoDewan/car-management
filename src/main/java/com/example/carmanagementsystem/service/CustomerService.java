@@ -47,7 +47,7 @@ public class CustomerService {
         if (customerOptional.isEmpty()) {
             throw new NoSuchElementException("customer");
         }
-        carRepository.deleteById(id);
+        customerRepository.deleteById(id);
     }
     public void updateCustomer(int id, CustomerUpdateDTO customerUpdateDTO) {
         Optional<Customer> optionalCustomer = customerRepository.findById(id);
